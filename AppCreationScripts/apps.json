@@ -28,9 +28,9 @@
 
       "IsPublicClient": false,
 
-      "HomePage": "http://localhost:5000/",
+      "HomePage": "https://pythonwebapp-tmoaad.azurewebsites.net/",
 
-      "ReplyUrls": "http://localhost:5000/getAToken",
+      "ReplyUrls": "https://pythonwebapp-tmoaad.azurewebsites.net/getAToken",
 
       "PasswordCredentials": "Auto", // We'd want password credentals to be generated automatically
 
