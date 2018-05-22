@@ -13,8 +13,7 @@ app.secret_key = 'development'
 SESSION = requests.Session()
 PORT = 5000  # A flask app by default runs on PORT 5000
 AUTHORITY_URL = config.AUTHORITY_HOST_URL + '/' + config.TENANT
-#REDIRECT_URI = 'http://localhost:{}/getAToken'.format(PORT)
-REDIRECT_URI = 'https://pythonwebapp-tmoaad.azurewebsites.net/getAToken'
+REDIRECT_URI = 'http://localhost:{}/getAToken'.format(PORT)
 TEMPLATE_AUTHZ_URL = ('https://login.microsoftonline.com/{}/oauth2/authorize?' +
                       'response_type=code&client_id={}&redirect_uri={}&' +
                       'state={}&resource={}')
@@ -22,8 +21,7 @@ TEMPLATE_AUTHZ_URL = ('https://login.microsoftonline.com/{}/oauth2/authorize?' +
 
 @app.route("/")
 def main():
-    #login_url = 'http://localhost:{}/login'.format(PORT)
-    login_url = 'https://pythonwebapp-tmoaad.azurewebsites.net/'
+    login_url = 'http://localhost:{}/login'.format(PORT)
     resp = Response(status=307)
     resp.headers['location'] = login_url
     return resp
